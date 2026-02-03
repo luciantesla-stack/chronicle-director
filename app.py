@@ -4,11 +4,11 @@ import google.generativeai as genai
 # --- 1. SETUP & CONFIGURATION ---
 st.set_page_config(page_title="Chronicle Director", page_icon="🎬")
 st.title("🎬 Chronicle: The Director")
-# Place this near the top of your script, perhaps after st.title()
 with st.sidebar:
     st.divider() # Adds a nice visual line
     st.write("### Feedback")
-    st.markdown("[Click here to share your experience!](https://docs.google.com/forms/d/e/1FAIpQLScuW-BRG4MUgT8V2bg8q4bfi1vDmEK0P_pBZI sXz79GfTJevw/viewform)")
+    # This button is immune to the formatting errors of markdown
+    st.link_button("Share your experience!", "https://forms.gle/GfMNjN12wQyaGiPFA")
 # Get your API Key from https://aistudio.google.com/
 # For local testing, you can paste it here; for deployment, use st.secrets
 # This automatically grabs the key from your secrets.toml file
