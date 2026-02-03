@@ -97,7 +97,7 @@ if api_key:
             st.markdown(message["content"])
 
     # --- 4. THE INTERACTION ---
-    if prompt := st.chat_input("Tell me about a specific moment..."):
+    if prompt := st.chat_input("Hi, I'm Kronos! Go ahead and introduce yourself..."):
         # Display user message
         st.chat_message("user").markdown(prompt)
         st.session_state.messages.append({"role": "user", "content": prompt})
