@@ -108,3 +108,8 @@ if api_key:
 
 else:
     st.warning("Please enter your Gemini API Key in the sidebar to begin.")
+
+    import streamlit as st
+
+# Place this wherever you want the link to appear
+st.markdown("[Click here to share your experience!](https://docs.google.com/forms/d/e/1FAIpQLScuW-BRG4MuGT8V2bg8q4bfIlvDmEK0P_pBZIsXz79GfTJevw/viewform)")
