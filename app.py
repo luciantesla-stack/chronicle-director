@@ -4,7 +4,11 @@ import google.generativeai as genai
 # --- 1. SETUP & CONFIGURATION ---
 st.set_page_config(page_title="Chronicle Director", page_icon="🎬")
 st.title("🎬 Chronicle: The Director")
-
+# Place this near the top of your script, perhaps after st.title()
+with st.sidebar:
+    st.divider() # Adds a nice visual line
+    st.write("### Feedback")
+    st.markdown("[Click here to share your experience!](https://docs.google.com/forms/d/e/1FAIpQLScuW-BRG4MUgT8V2bg8q4bfi1vDmEK0P_pBZI sXz79GfTJevw/viewform)")
 # Get your API Key from https://aistudio.google.com/
 # For local testing, you can paste it here; for deployment, use st.secrets
 # This automatically grabs the key from your secrets.toml file
@@ -110,6 +114,3 @@ else:
     st.warning("Please enter your Gemini API Key in the sidebar to begin.")
 
     import streamlit as st
-
-# Place this wherever you want the link to appear
-st.markdown("[Click here to share your experience!](https://docs.google.com/forms/d/e/1FAIpQLScuW-BRG4MuGT8V2bg8q4bfIlvDmEK0P_pBZIsXz79GfTJevw/viewform)")
